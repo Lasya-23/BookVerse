@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order History</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+<header>
+<h2>📦 My Orders</h2>
+<nav>
+<a href="home.html">Home</a>
+<a href="profile.html">Profile</a>
+</nav>
+</header>
+
+
+<div class="orders" id="orders"></div>
+
+
+<script>
+const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+const container = document.getElementById('orders');
+
+
+if(orders.length === 0){
+container.innerHTML = '<p>No orders yet</p>';
+}
+
+
+orders.forEach((order, index) => {
+const div = document.createElement('div');
+div.className = 'order-card';
+div.innerHTML = `<h3>Order #${index+1}</h3>
+<p>Date: ${order.date}</p>
+<p>Total: ₹${order.total}</p>`;
+container.appendChild(div);
+});
+</script>
+</body>
+</html>

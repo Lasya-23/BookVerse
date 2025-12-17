@@ -1,0 +1,121 @@
+.login-container, .payment, .cart { max-width:400px; margin:50px auto; padding:20px; background:white; border-radius:10px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+input { width:80%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
+button { padding:10px 15px; background:#27ae60; color:white; border:none; border-radius:5px; cursor:pointer; }
+button:hover { background:#2ecc71; }
+body.home {
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover no-repeat fixed;
+}
+
+.hero {
+  height: 70vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("image/library.jpg") center/cover no-repeat;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 20px;
+}
+.book {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.profile-card, .order-card {
+background: rgba(255,255,255,0.95);
+margin: 20px auto;
+padding: 20px;
+max-width: 400px;
+border-radius: 12px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.orders {
+display: grid;
+gap: 20px;
+padding: 20px;
+}
+.user-dashboard {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+
+.user-card {
+background: rgba(255,255,255,0.95);
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+.user-card a {
+display: inline-block;
+margin-top: 10px;
+color: #3498db;
+text-decoration: none;
+font-weight: bold;
+}
+.categories {
+  display: flex;
+  gap: 25px;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+.cat-card {
+  width: 200px;
+  height: 120px;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  border-radius: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.cat-card span {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.cat-card h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cat-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+}
